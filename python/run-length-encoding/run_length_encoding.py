@@ -2,7 +2,7 @@ from re import sub
 from itertools import groupby
 
 def decode(string):
-    return sub(r'(\d+)(\D)', lambda x: int(x.group(1)) * x.group(2), string)
+    return sub(r'(\d+)(\D)', lambda x: int(x.group(1))*x.group(2), string)
 
 def encode(string):
     chunks = [''.join(s) for _, s in groupby(string)]
